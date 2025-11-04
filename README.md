@@ -32,14 +32,14 @@ Power BI Dashboard (Visualization & Reporting)
 
 ## 🎯 Project Objectives
 
-- ✅ Build an end-to-end ETL/ELT pipeline using Azure services
-- ✅ Ingest raw data dynamically from GitHub using ADF HTTP connectors
-- ✅ Store raw data in ADLS (Bronze Layer)
-- ✅ Transform & curate data with Databricks (Silver Layer)
-- ✅ Serve analytical data via Synapse (Gold Layer)
-- ✅ Visualize results with Power BI dashboards
-- ✅ Implement parameterization, ForEach looping, and JSON-driven automation
-- ✅ Follow Medallion Architecture principles for modern data engineering
+-  Build an end-to-end ETL/ELT pipeline using Azure services
+-  Ingest raw data dynamically from GitHub using ADF HTTP connectors
+-  Store raw data in ADLS (Bronze Layer)
+-  Transform & curate data with Databricks (Silver Layer)
+-  Serve analytical data via Synapse (Gold Layer)
+-  Visualize results with Power BI dashboards
+-  Implement parameterization, ForEach looping, and JSON-driven automation
+-  Follow Medallion Architecture principles for modern data engineering
 
 ---
 
@@ -47,11 +47,11 @@ Power BI Dashboard (Visualization & Reporting)
 
 | Component | Azure Service | Description |
 |-----------|--------------|-------------|
-| ☁️ Storage | Azure Data Lake Gen2 | Hierarchical, scalable data storage |
-| 🔄 Orchestration | Azure Data Factory | Handles dynamic ingestion pipelines |
-| 🔥 Transformation | Azure Databricks | Spark-based data cleansing & enrichment |
-| 🧠 Analytics | Azure Synapse Analytics | Analytical serving layer for BI |
-| 📊 Visualization | Power BI | Dashboarding and interactive reports |
+|  Storage | Azure Data Lake Gen2 | Hierarchical, scalable data storage |
+|  Orchestration | Azure Data Factory | Handles dynamic ingestion pipelines |
+|  Transformation | Azure Databricks | Spark-based data cleansing & enrichment |
+|  Analytics | Azure Synapse Analytics | Analytical serving layer for BI |
+|  Visualization | Power BI | Dashboarding and interactive reports |
 
 ---
 
@@ -177,7 +177,7 @@ Upload `pipeline_config.json` to `/parameters/` in ADLS
 1. Run the pipeline in **Debug Mode**
 2. Once validated, click **Publish All**
 
-✅ **Output:** Raw CSVs land in `/bronze/` for each dataset.
+ **Output:** Raw CSVs land in `/bronze/` for each dataset.
 
 ---
 
@@ -194,7 +194,7 @@ Upload `pipeline_config.json` to `/parameters/` in ADLS
    - Apply schema validation, cleaning, joins, deduplication
    - Write cleaned data in Parquet format to `/silver/`
 
-✅ **Output:** Cleaned, curated Parquet files stored in `/silver/`.
+ **Output:** Cleaned, curated Parquet files stored in `/silver/`.
 
 ---
 
@@ -219,7 +219,7 @@ SELECT * FROM OPENROWSET(
 SELECT COUNT(*) FROM gold.sales;
 ```
 
-✅ **Output:** Views and external tables available for BI tools.
+ **Output:** Views and external tables available for BI tools.
 
 ---
 
@@ -234,7 +234,7 @@ SELECT COUNT(*) FROM gold.sales;
    - Customer Insights
    - Return Trends
 
-✅ **Output:** Fully interactive Power BI dashboards with live Synapse connectivity.
+ **Output:** Fully interactive Power BI dashboards with live Synapse connectivity.
 
 ---
 
@@ -242,10 +242,10 @@ SELECT COUNT(*) FROM gold.sales;
 
 | Layer | Check | Status |
 |-------|-------|--------|
-| Bronze | 10 CSVs ingested dynamically | ✅ Success |
-| Silver | Data cleaned & joined | ✅ Success |
-| Gold | SQL views + CTAS created | ✅ Success |
-| Power BI | Dashboards live in <5s | ✅ Success |
+| Bronze | 10 CSVs ingested dynamically |  Success |
+| Silver | Data cleaned & joined |  Success |
+| Gold | SQL views + CTAS created |  Success |
+| Power BI | Dashboards live in <5s |  Success |
 
 ---
 
